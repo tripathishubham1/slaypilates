@@ -417,9 +417,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 /* ===== Reel card — iframe with cropped header/footer ===== */
 .reel-card {
-    flex: 0 0 300px;
-    height: 467px;
-    aspect-ratio: 9 / 14;
+    flex: 0 0 280px;
+    height: 380px;
     scroll-snap-align: start;
     border-radius: 14px;
     overflow: hidden;
@@ -428,24 +427,11 @@ button { cursor: pointer; font-family: var(--font-sans); }
 }
 
 .reel-card iframe {
-    position: absolute;
-    top: -64px;
-    left: 0;
     width: 100%;
-    height: calc(100% + 64px);
+    height: 450px;
     border: none;
-}
-
-.reel-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: linear-gradient(to bottom, transparent 0%, #000 60%);
-    z-index: 2;
-    pointer-events: none;
+    margin-top: -60px;
+    display: block;
 }
 
 .tcard > img {
@@ -1409,7 +1395,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
     .cards-section { padding-bottom: 60px; }
     .tcard { flex: 0 0 240px; height: 350px; }
-    .reel-card { flex: 0 0 260px; }
+    .reel-card { flex: 0 0 250px; height: 340px; }
+    .reel-card iframe { height: 410px; }
 
     .transforms { height: 250vh; }
     .transforms-sticky { padding: 36px 0 0; }
@@ -1494,7 +1481,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .cards-track { padding: 0 14px; gap: 10px; }
     .tcard { flex: 0 0 210px; height: 300px; }
     .tcard-quote { font-size: 12.5px; }
-    .reel-card { flex: 0 0 220px; }
+    .reel-card { flex: 0 0 210px; height: 280px; }
+    .reel-card iframe { height: 350px; }
 
     .transforms { height: 220vh; }
     .transforms-sticky { padding: 28px 0 0; }
