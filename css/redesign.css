@@ -418,7 +418,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
 /* ===== Reel card — iframe with cropped header/footer ===== */
 .reel-card {
     flex: 0 0 300px;
-    height: 500px;
+    aspect-ratio: 9 / 15;
     scroll-snap-align: start;
     border-radius: 14px;
     overflow: hidden;
@@ -428,10 +428,11 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 .reel-card iframe {
     width: 100%;
-    height: calc(100% + 260px);
+    height: calc(100% + 600px);
     border: none;
-    margin-top: -56px;
+    margin-top: -64px;
     display: block;
+    pointer-events: auto;
 }
 
 .tcard > img {
@@ -1395,7 +1396,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
     .cards-section { padding-bottom: 60px; }
     .tcard { flex: 0 0 240px; height: 350px; }
-    .reel-card { flex: 0 0 260px; height: 430px; }
+    .reel-card { flex: 0 0 260px; }
 
     .transforms { height: 250vh; }
     .transforms-sticky { padding: 36px 0 0; }
@@ -1480,7 +1481,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .cards-track { padding: 0 14px; gap: 10px; }
     .tcard { flex: 0 0 210px; height: 300px; }
     .tcard-quote { font-size: 12.5px; }
-    .reel-card { flex: 0 0 220px; height: 380px; }
+    .reel-card { flex: 0 0 220px; }
 
     .transforms { height: 220vh; }
     .transforms-sticky { padding: 28px 0 0; }
