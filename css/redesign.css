@@ -1359,10 +1359,11 @@ button { cursor: pointer; font-family: var(--font-sans); }
 }
 
 @media (max-width: 768px) {
-    .hero { padding: 28px 28px 0; }
-    .hero-card { height: 70vh; min-height: 300px; border-radius: 18px; }
+    .hero { padding: 20px 20px 0; }
+    .hero-card { height: 65vh; min-height: 300px; border-radius: 18px; }
 
-    .nav { padding: 14px 20px; }
+    .nav { padding: 14px 18px; }
+    .nav-logo img { height: 30px; }
     .nav-links {
         display: none;
         position: fixed;
@@ -1382,63 +1383,196 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .nav-right { display: none; }
     .nav-burger { display: flex; }
 
-    .hero-content { padding: 0 22px 32px; }
-    .hero-title { font-size: 30px; }
+    .hero-content { padding: 0 22px 28px; }
+    .hero-title { font-size: 28px; }
+    .hero-desc { font-size: 13px; max-width: 300px; margin-bottom: 22px; }
 
     .hero-btns { flex-direction: column; }
-    .btn-pill { justify-content: center; }
+    .btn-pill { justify-content: center; padding: 11px 22px; font-size: 13px; }
 
-    .intro { padding: 28px 28px 64px; }
+    .intro { padding: 20px 20px 60px; }
     .intro-photo { min-height: auto; border-radius: 18px; }
-    .intro-photo::after { border-radius: 18px; }
-    .intro-text { max-width: 100%; padding: 36px 24px; margin-left: 0; }
+    .intro-photo::after { border-radius: 18px; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); }
+    .intro-photo img { transform: scaleX(-1) scale(1.4); object-position: 50% 30%; }
+    .intro-text { max-width: 100%; padding: 32px 22px; margin-left: 0; }
     .section-heading--md { font-size: 26px; }
     .section-heading--lg { font-size: 28px; }
+    .body-text { font-size: 14px; }
 
+    .cards-section { padding-bottom: 60px; }
     .tcard { flex: 0 0 240px; height: 350px; }
-
-    .studios-row { flex-direction: column; align-items: flex-start; }
-    .studios-imgs { grid-template-columns: 1fr; }
-    .studios-imgs .simg { height: 260px; }
-
-    .locations { padding: 60px 20px; }
-    .loc-layout { grid-template-columns: 1fr; height: auto; }
-    .loc-map { height: 300px; }
-    .loc-list { border-left: none; border-top: 1px solid #eee; max-height: 400px; }
-    .franchise-inner { gap: 36px; }
-    .fform { padding: 24px; }
+    .tcard--reel { flex: 0 0 260px; }
 
     .transforms { height: 250vh; }
+    .transforms-sticky { padding: 36px 0 0; }
     .transforms-track { padding: 0 20px; gap: 16px; }
     .transforms-head { padding: 0 20px 28px; }
     .tf-card { flex: 0 0 80vw; }
     .tf-card-title { font-size: 24px; }
     .tf-card-desc { font-size: 13px; }
-    .tf-card-content { padding: 28px 24px; }
+    .tf-card-content { padding: 24px 20px; }
+    .tf-tag { padding: 6px 14px; font-size: 12px; top: 14px; left: 14px; }
 
-    .footer-grid { grid-template-columns: 1fr; gap: 28px; padding: 48px 20px 32px; }
-    .footer-bar { flex-direction: column; gap: 6px; text-align: center; }
+    .studios { padding: 36px 20px 60px; }
+    .studios-row { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 28px; }
+    .studios-imgs { grid-template-columns: 1fr; }
+    .studios-imgs .simg { height: 260px; }
 
-    .page-hero { padding: 28px 28px 0; }
-    .page-hero-card { height: 40vh; min-height: 260px; border-radius: 18px; }
-    .page-hero-content { padding: 0 22px 32px; }
-    .page-hero-title { font-size: 28px; }
+    .locations { padding: 60px 20px; }
+    .locations-head { margin-bottom: 32px; }
+    .loc-layout { grid-template-columns: 1fr; height: auto; border-radius: 14px; }
+    .loc-map { height: 280px; }
+    .loc-list { border-left: none; border-top: 1px solid #eee; max-height: 400px; }
+    .loc-item { padding: 18px 20px; }
+    .loc-item-name { font-size: 16px; }
+    .loc-item-addr { font-size: 11.5px; margin-bottom: 10px; }
+    .loc-item-btn { padding: 5px 12px; font-size: 10.5px; }
+
+    .franchise { padding: 60px 20px; }
+    .franchise-inner { gap: 32px; }
+    .franchise-left .fimg { height: 220px; }
+    .fform { padding: 24px; }
+    .fform h3 { font-size: 21px; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 28px; padding: 44px 20px 28px; }
+    .footer-brand p { max-width: 100%; }
+    .footer-bar { flex-direction: column; gap: 6px; text-align: center; padding: 16px 20px; }
+
+    /* ----- Subpages at 768px ----- */
+    .page-hero { padding: 20px 20px 0; }
+    .page-hero-card { height: 38vh; min-height: 240px; border-radius: 18px; }
+    .page-hero-content { padding: 0 22px 28px; }
+    .page-hero-title { font-size: 26px; }
+
     .page-section { padding: 48px 20px; }
-    .about-grid { grid-template-columns: 1fr; gap: 32px; }
-    .about-img { height: 300px; }
-    .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    .benefit-card { padding: 28px 16px; }
-    .benefit-card h3 { font-size: 15px; }
-    .contact-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 28px; }
+    .about-img { height: 280px; }
+    .about-text .btn-pill { width: 100%; }
+
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .benefit-card { padding: 24px 14px; }
+    .benefit-card img { width: 44px; height: 44px; margin-bottom: 14px; }
+    .benefit-card h3 { font-size: 14px; }
+
+    .contact-grid { grid-template-columns: 1fr; gap: 14px; }
+    .contact-card { padding: 24px 20px; }
+
     .franchise-info { padding: 48px 20px; }
+    .franchise-info .benefits-grid { margin-top: 36px; }
+
+    .policy-content h1 { font-size: 26px; }
+    .policy-content h2 { font-size: 20px; }
 }
 
 @media (max-width: 480px) {
-    .hero-card { height: 70vh; min-height: 280px; }
-    .hero-title { font-size: 26px; }
-    .section-heading--md { font-size: 23px; }
-    .tcard { flex: 0 0 215px; height: 310px; }
+    .hero { padding: 14px 14px 0; }
+    .hero-card { height: 60vh; min-height: 260px; border-radius: 16px; }
+    .hero-content { padding: 0 18px 24px; }
+    .hero-title { font-size: 24px; margin-bottom: 12px; }
+    .hero-desc { font-size: 12.5px; margin-bottom: 18px; max-width: 260px; }
+    .btn-pill { padding: 10px 20px; font-size: 12.5px; }
+
+    .nav { padding: 12px 14px; }
+    .nav-logo img { height: 28px; }
+
+    .intro { padding: 14px 14px 48px; }
+    .intro-text { padding: 26px 18px; }
+    .section-heading--md { font-size: 22px; }
+    .section-heading--lg { font-size: 24px; }
+    .body-text { font-size: 13.5px; }
+    .intro-label { font-size: 11px; letter-spacing: 2px; margin-bottom: 14px; }
+
+    .cards-section { padding-bottom: 48px; }
+    .cards-track { padding: 0 14px; gap: 10px; }
+    .tcard { flex: 0 0 210px; height: 300px; }
     .tcard-quote { font-size: 12.5px; }
-    .studios-imgs .simg { height: 210px; }
-    .benefits-grid { grid-template-columns: 1fr 1fr; }
+    .tcard--reel { flex: 0 0 230px; }
+
+    .transforms { height: 220vh; }
+    .transforms-sticky { padding: 28px 0 0; }
+    .transforms-track { padding: 0 14px; gap: 12px; }
+    .transforms-head { padding: 0 14px 22px; }
+    .tf-card { flex: 0 0 85vw; }
+    .tf-card-title { font-size: 22px; margin-bottom: 10px; }
+    .tf-card-desc { font-size: 12.5px; line-height: 1.5; }
+    .tf-card-content { padding: 20px 18px; }
+    .tf-tag { padding: 5px 12px; font-size: 11px; top: 12px; left: 12px; }
+
+    .studios { padding: 28px 14px 48px; }
+    .studios-row { margin-bottom: 20px; }
+    .studios-imgs .simg { height: 200px; border-radius: 12px; }
+
+    .locations { padding: 48px 14px; }
+    .locations-head { margin-bottom: 24px; }
+    .loc-layout { border-radius: 12px; }
+    .loc-map { height: 240px; }
+    .loc-list { max-height: 350px; }
+    .loc-item { padding: 16px; gap: 12px; }
+    .loc-item-pin { width: 32px; height: 32px; font-size: 12px; }
+    .loc-item-name { font-size: 15px; }
+    .loc-item-actions { flex-wrap: wrap; }
+
+    .franchise { padding: 48px 14px; }
+    .franchise-left .section-heading { font-size: 24px; }
+    .franchise-left p { font-size: 13px; }
+    .franchise-left .fimg { height: 180px; border-radius: 12px; }
+    .fform { padding: 20px; border-radius: 14px; }
+    .fform h3 { font-size: 20px; margin-bottom: 18px; }
+    .ff-field input, .ff-field textarea { padding: 10px 14px; font-size: 13px; border-radius: 8px; }
+    .ff-submit { padding: 12px; font-size: 13px; }
+
+    .footer-grid { padding: 36px 14px 24px; gap: 24px; }
+    .footer-col h4 { font-size: 16px; margin-bottom: 14px; }
+    .footer-col a, .footer-col p { font-size: 12.5px; }
+    .footer-brand img { height: 34px; }
+    .footer-bar { font-size: 11px; padding: 14px; }
+
+    /* ----- Subpages at 480px ----- */
+    .page-hero { padding: 14px 14px 0; }
+    .page-hero-card { height: 35vh; min-height: 200px; border-radius: 16px; }
+    .page-hero-content { padding: 0 18px 22px; }
+    .page-hero-title { font-size: 24px; }
+    .page-hero-breadcrumb { font-size: 12px; }
+
+    .page-section { padding: 36px 14px; }
+    .about-img { height: 220px; border-radius: 14px; }
+    .about-text .body-text { font-size: 13.5px; }
+
+    .benefits-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .benefit-card { padding: 20px 12px; border-radius: 14px; }
+    .benefit-card img { width: 40px; height: 40px; margin-bottom: 12px; }
+    .benefit-card h3 { font-size: 13px; }
+
+    .contact-grid { gap: 12px; }
+    .contact-card { border-radius: 14px; }
+    .contact-card h3 { font-size: 17px; }
+    .contact-card p { font-size: 13px; }
+    .contact-card-btn { font-size: 12px; padding: 8px 16px; }
+
+    .franchise-info { padding: 36px 14px; }
+    .franchise-info .body-text { font-size: 13.5px; }
+
+    .policy-content { padding: 0; }
+    .policy-content h1 { font-size: 22px; }
+    .policy-content h2 { font-size: 18px; }
+    .policy-content p, .policy-content li { font-size: 13.5px; }
+}
+
+@media (max-width: 360px) {
+    .hero-card { min-height: 240px; }
+    .hero-title { font-size: 22px; }
+    .hero-desc { font-size: 12px; }
+
+    .tf-card { flex: 0 0 88vw; }
+    .tcard { flex: 0 0 190px; height: 280px; }
+
+    .section-heading--md { font-size: 20px; }
+    .section-heading--lg { font-size: 22px; }
+
+    .page-hero-card { min-height: 180px; }
+    .page-hero-title { font-size: 22px; }
+
+    .benefits-grid { grid-template-columns: 1fr; }
+    .loc-item-actions { gap: 6px; }
+    .loc-item-btn { padding: 4px 10px; font-size: 10px; }
 }
