@@ -410,18 +410,22 @@ if (ticker) {
     });
 })();
 
-// Horizontal scroll on vertical scroll — Transformations section
+// Horizontal scroll on vertical scroll — Transformations section (desktop only)
 (function() {
-    const section = document.getElementById('transforms');
-    const tfTrack = document.getElementById('transforms-track');
+    var section = document.getElementById('transforms');
+    var tfTrack = document.getElementById('transforms-track');
     if (!section || !tfTrack) return;
 
+    function isMobile() { return window.innerWidth <= 768; }
+
     function onScroll() {
-        const rect = section.getBoundingClientRect();
-        const sectionTop = window.scrollY + rect.top;
-        const scrollable = section.offsetHeight - window.innerHeight;
-        const progress = Math.min(Math.max((window.scrollY - sectionTop) / scrollable, 0), 1);
-        const maxTranslate = tfTrack.scrollWidth - tfTrack.parentElement.offsetWidth;
+        if (isMobile()) { tfTrack.style.transform = ''; return; }
+        var rect = section.getBoundingClientRect();
+        var sectionTop = window.scrollY + rect.top;
+        var scrollable = section.offsetHeight - window.innerHeight;
+        if (scrollable <= 0) return;
+        var progress = Math.min(Math.max((window.scrollY - sectionTop) / scrollable, 0), 1);
+        var maxTranslate = tfTrack.scrollWidth - tfTrack.parentElement.offsetWidth;
         tfTrack.style.transform = 'translateX(' + (-progress * maxTranslate) + 'px)';
     }
 

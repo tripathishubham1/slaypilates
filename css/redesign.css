@@ -539,7 +539,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
    TRANSFORMATIONS — horizontal scroll on vertical scroll
    ===================================================================== */
 .transforms {
-    height: 180vh;
+    height: 150vh;
     position: relative;
     background: #fff;
 }
@@ -1346,7 +1346,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .intro-photo::after { border-radius: 18px; }
     .intro-text { max-width: 460px; padding: 48px 40px; }
 
-    .transforms { height: 160vh; }
+    .transforms { height: 140vh; }
     .transforms-track { padding: 0 28px; gap: 20px; }
     .transforms-head { padding: 0 28px 36px; }
     .tf-card { flex: 0 0 55vw; }
@@ -1407,9 +1407,10 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .reel-card { flex: 0 0 230px; height: 310px; }
     .reel-card iframe { height: 380px; }
 
-    .transforms { height: 130vh; }
-    .transforms-sticky { padding: 36px 0 0; }
-    .transforms-track { padding: 0 20px; gap: 16px; }
+    .transforms { height: auto; }
+    .transforms-sticky { position: static; height: auto; overflow: visible; padding: 36px 0 40px; }
+    .transforms-track { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 0 20px; gap: 16px; scrollbar-width: none; }
+    .transforms-track::-webkit-scrollbar { display: none; }
     .transforms-head { padding: 0 20px 28px; }
     .tf-card { flex: 0 0 80vw; }
     .tf-card-title { font-size: 24px; }
@@ -1492,11 +1493,10 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .reel-card { flex: 0 0 190px; height: 260px; }
     .reel-card iframe { height: 330px; }
 
-    .transforms { height: 120vh; }
-    .transforms-sticky { padding: 28px 0 0; }
+    .transforms-sticky { padding: 28px 0 32px; }
     .transforms-track { padding: 0 14px; gap: 12px; }
     .transforms-head { padding: 0 14px 22px; }
-    .tf-card { flex: 0 0 85vw; }
+    .tf-card { flex: 0 0 85vw; height: 55vh; }
     .tf-card-title { font-size: 22px; margin-bottom: 10px; }
     .tf-card-desc { font-size: 12.5px; line-height: 1.5; }
     .tf-card-content { padding: 20px 18px; }
