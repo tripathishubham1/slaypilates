@@ -539,7 +539,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
    TRANSFORMATIONS — horizontal scroll on vertical scroll
    ===================================================================== */
 .transforms {
-    height: 300vh;
+    height: 180vh;
     position: relative;
     background: #fff;
 }
@@ -1346,6 +1346,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .intro-photo::after { border-radius: 18px; }
     .intro-text { max-width: 460px; padding: 48px 40px; }
 
+    .transforms { height: 160vh; }
     .transforms-track { padding: 0 28px; gap: 20px; }
     .transforms-head { padding: 0 28px 36px; }
     .tf-card { flex: 0 0 55vw; }
