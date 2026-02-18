@@ -386,24 +386,32 @@ button { cursor: pointer; font-family: var(--font-sans); }
    TESTIMONIAL CARDS — horizontal scroll
    ===================================================================== */
 .cards-section {
-    padding: 0 0 100px;
+    padding: 0 0 40px;
     overflow: hidden;
     background: var(--page-bg);
 }
 
-.cards-track {
-    display: flex;
-    gap: 14px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 28px;
-    scrollbar-width: none;
-    cursor: grab;
+/* Ticker / marquee wrapper */
+.ticker {
+    overflow: hidden;
+    width: 100%;
 }
 
-.cards-track::-webkit-scrollbar { display: none; }
-.cards-track:active { cursor: grabbing; }
+.ticker-track {
+    display: flex;
+    gap: 14px;
+    width: max-content;
+    animation: ticker-scroll 40s linear infinite;
+}
+
+.ticker-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
 .tcard {
     flex: 0 0 280px;
@@ -634,7 +642,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
    STUDIOS — heading left, button right, two images below
    ===================================================================== */
 .studios {
-    padding: 48px 28px 80px;
+    padding: 28px 28px 80px;
     background: var(--page-bg);
 }
 
@@ -1393,10 +1401,10 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .section-heading--lg { font-size: 28px; }
     .body-text { font-size: 14px; }
 
-    .cards-section { padding-bottom: 60px; }
-    .tcard { flex: 0 0 240px; height: 350px; }
-    .reel-card { flex: 0 0 250px; height: 340px; }
-    .reel-card iframe { height: 410px; }
+    .cards-section { padding-bottom: 40px; }
+    .ticker-track { animation-duration: 30s; }
+    .reel-card { flex: 0 0 230px; height: 310px; }
+    .reel-card iframe { height: 380px; }
 
     .transforms { height: 250vh; }
     .transforms-sticky { padding: 36px 0 0; }
@@ -1408,7 +1416,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .tf-card-content { padding: 24px 20px; }
     .tf-tag { padding: 6px 14px; font-size: 12px; top: 14px; left: 14px; }
 
-    .studios { padding: 36px 20px 60px; }
+    .studios { padding: 20px 20px 60px; }
     .studios-row { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 28px; }
     .studios-imgs { grid-template-columns: 1fr; }
     .studios-imgs .simg { height: 260px; }
@@ -1477,12 +1485,10 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .body-text { font-size: 13.5px; }
     .intro-label { font-size: 11px; letter-spacing: 2px; margin-bottom: 14px; }
 
-    .cards-section { padding-bottom: 48px; }
-    .cards-track { padding: 0 14px; gap: 10px; }
-    .tcard { flex: 0 0 210px; height: 300px; }
-    .tcard-quote { font-size: 12.5px; }
-    .reel-card { flex: 0 0 210px; height: 280px; }
-    .reel-card iframe { height: 350px; }
+    .cards-section { padding-bottom: 32px; }
+    .ticker-track { gap: 10px; animation-duration: 25s; }
+    .reel-card { flex: 0 0 190px; height: 260px; }
+    .reel-card iframe { height: 330px; }
 
     .transforms { height: 220vh; }
     .transforms-sticky { padding: 28px 0 0; }
@@ -1494,7 +1500,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .tf-card-content { padding: 20px 18px; }
     .tf-tag { padding: 5px 12px; font-size: 11px; top: 12px; left: 12px; }
 
-    .studios { padding: 28px 14px 48px; }
+    .studios { padding: 16px 14px 48px; }
     .studios-row { margin-bottom: 20px; }
     .studios-imgs .simg { height: 200px; border-radius: 12px; }
 

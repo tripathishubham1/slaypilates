@@ -105,17 +105,29 @@
     </div>
 </section>
 
-<!-- ======================== REELS ======================== -->
+<!-- ======================== REELS TICKER ======================== -->
 <section class="cards-section">
-    <div class="cards-track" id="cards-track">
-        <div class="reel-card"><iframe src="https://www.instagram.com/reel/DG-pu7yS-I9/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
-        <div class="reel-card"><iframe src="https://www.instagram.com/reel/DGp7idtS2Yt/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
-        <div class="reel-card"><iframe src="https://www.instagram.com/reel/DU0efe7kl5d/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
-        <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUx9ocXCQQy/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
-        <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUvzyU1kiZt/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
-        <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUpDRssksiT/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
-        <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUihuvTCVMX/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
-        <div class="reel-card"><iframe src="https://www.instagram.com/reel/DS_39rXicHa/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+    <div class="ticker">
+        <div class="ticker-track">
+            <!-- Set 1 -->
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DG-pu7yS-I9/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DGp7idtS2Yt/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DU0efe7kl5d/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUx9ocXCQQy/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUvzyU1kiZt/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUpDRssksiT/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUihuvTCVMX/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DS_39rXicHa/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <!-- Set 2 (duplicate for seamless loop) -->
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DG-pu7yS-I9/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DGp7idtS2Yt/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DU0efe7kl5d/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUx9ocXCQQy/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUvzyU1kiZt/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUpDRssksiT/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DUihuvTCVMX/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+            <div class="reel-card"><iframe src="https://www.instagram.com/reel/DS_39rXicHa/embed/" allowtransparency="true" allowfullscreen="true" scrolling="no" loading="lazy"></iframe></div>
+        </div>
     </div>
 </section>
 
@@ -375,13 +387,12 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// Drag to scroll testimonials
-const track = document.getElementById('cards-track');
-let drag = false, sx, sl;
-track.addEventListener('pointerdown', e => { drag = true; track.setPointerCapture(e.pointerId); sx = e.clientX; sl = track.scrollLeft; });
-track.addEventListener('pointermove', e => { if (!drag) return; track.scrollLeft = sl - (e.clientX - sx); });
-track.addEventListener('pointerup', () => drag = false);
-track.addEventListener('pointercancel', () => drag = false);
+// Pause ticker on hover
+const ticker = document.querySelector('.ticker-track');
+if (ticker) {
+    ticker.addEventListener('mouseenter', () => ticker.style.animationPlayState = 'paused');
+    ticker.addEventListener('mouseleave', () => ticker.style.animationPlayState = 'running');
+}
 
 // Location map interaction
 (function() {
