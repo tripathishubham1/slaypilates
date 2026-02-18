@@ -421,15 +421,22 @@ if (ticker) {
 
     function isMobile() { return window.innerWidth <= 768; }
 
+    var ticking = false;
     function onScroll() {
-        if (isMobile()) { tfTrack.style.transform = ''; return; }
-        var rect = section.getBoundingClientRect();
-        var sectionTop = window.scrollY + rect.top;
-        var scrollable = section.offsetHeight - window.innerHeight;
-        if (scrollable <= 0) return;
-        var progress = Math.min(Math.max((window.scrollY - sectionTop) / scrollable, 0), 1);
-        var maxTranslate = tfTrack.scrollWidth - tfTrack.parentElement.offsetWidth;
-        tfTrack.style.transform = 'translateX(' + (-progress * maxTranslate) + 'px)';
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                if (isMobile()) { tfTrack.style.transform = ''; ticking = false; return; }
+                var rect = section.getBoundingClientRect();
+                var sectionTop = window.scrollY + rect.top;
+                var scrollable = section.offsetHeight - window.innerHeight;
+                if (scrollable <= 0) { ticking = false; return; }
+                var progress = Math.min(Math.max((window.scrollY - sectionTop) / scrollable, 0), 1);
+                var maxTranslate = tfTrack.scrollWidth - tfTrack.parentElement.offsetWidth;
+                tfTrack.style.transform = 'translateX(' + (-progress * maxTranslate) + 'px)';
+                ticking = false;
+            });
+            ticking = true;
+        }
     }
 
     window.addEventListener('scroll', onScroll, { passive: true });
