@@ -213,7 +213,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 .hero-title {
     font-family: var(--font-serif);
-    font-size: clamp(34px, 4vw, 56px);
+    font-size: clamp(38px, 5vw, 64px);
     font-weight: 400;
     line-height: 1.12;
     color: var(--white);
@@ -365,12 +365,12 @@ button { cursor: pointer; font-family: var(--font-sans); }
 }
 
 .section-heading--md {
-    font-size: clamp(28px, 3.2vw, 40px);
+    font-size: clamp(32px, 3.8vw, 48px);
     margin-bottom: 24px;
 }
 
 .section-heading--lg {
-    font-size: clamp(30px, 3.8vw, 46px);
+    font-size: clamp(36px, 4.5vw, 56px);
     margin-bottom: 18px;
 }
 
@@ -1029,7 +1029,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 .page-hero-title {
     font-family: var(--font-serif);
-    font-size: clamp(32px, 4vw, 52px);
+    font-size: clamp(36px, 5vw, 60px);
     font-weight: 400;
     line-height: 1.15;
     color: var(--white);
@@ -1391,7 +1391,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .page-hero-card.nav-open { overflow: visible; }
 
     .hero-content { padding: 0 22px 28px; }
-    .hero-title { font-size: 28px; }
+    .hero-title { font-size: 34px; }
     .hero-desc { font-size: 13px; max-width: 300px; margin-bottom: 22px; }
 
     .hero-btns { flex-direction: column; }
@@ -1403,8 +1403,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .intro-photo img { transform: scaleX(-1) scale(1.4); object-position: 50% 30%; }
     .intro-text { max-width: 100%; padding: 32px 22px; margin-left: 0; }
     .intro-text .body-text ~ .body-text { display: none; }
-    .section-heading--md { font-size: 26px; }
-    .section-heading--lg { font-size: 28px; }
+    .section-heading--md { font-size: 30px; }
+    .section-heading--lg { font-size: 34px; }
     .body-text { font-size: 14px; }
 
     .cards-section { padding-bottom: 40px; }
@@ -1453,7 +1453,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .page-hero { padding: 20px 20px 0; }
     .page-hero-card { height: 38vh; min-height: 240px; border-radius: 18px; }
     .page-hero-content { padding: 0 22px 28px; }
-    .page-hero-title { font-size: 26px; }
+    .page-hero-title { font-size: 32px; }
 
     .page-section { padding: 48px 20px; }
     .about-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -1479,7 +1479,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .hero { padding: 14px 14px 0; }
     .hero-card { height: 60vh; min-height: 260px; border-radius: 16px; }
     .hero-content { padding: 0 18px 24px; }
-    .hero-title { font-size: 24px; margin-bottom: 12px; }
+    .hero-title { font-size: 30px; margin-bottom: 12px; }
     .hero-desc { font-size: 12.5px; margin-bottom: 18px; max-width: 260px; }
     .btn-pill { padding: 10px 20px; font-size: 12.5px; }
 
@@ -1488,8 +1488,8 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
     .intro { padding: 14px 14px 48px; }
     .intro-text { padding: 26px 18px; }
-    .section-heading--md { font-size: 22px; }
-    .section-heading--lg { font-size: 24px; }
+    .section-heading--md { font-size: 26px; }
+    .section-heading--lg { font-size: 30px; }
     .body-text { font-size: 13.5px; }
     .intro-label { font-size: 11px; letter-spacing: 2px; margin-bottom: 14px; }
 
@@ -1542,7 +1542,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .page-hero { padding: 14px 14px 0; }
     .page-hero-card { height: 35vh; min-height: 200px; border-radius: 16px; }
     .page-hero-content { padding: 0 18px 22px; }
-    .page-hero-title { font-size: 24px; }
+    .page-hero-title { font-size: 28px; }
     .page-hero-breadcrumb { font-size: 12px; }
 
     .page-section { padding: 36px 14px; }
@@ -1571,17 +1571,17 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 @media (max-width: 360px) {
     .hero-card { min-height: 240px; }
-    .hero-title { font-size: 22px; }
+    .hero-title { font-size: 26px; }
     .hero-desc { font-size: 12px; }
 
     .tf-card { flex: 0 0 88vw; }
     .tcard { flex: 0 0 190px; height: 280px; }
 
-    .section-heading--md { font-size: 20px; }
-    .section-heading--lg { font-size: 22px; }
+    .section-heading--md { font-size: 24px; }
+    .section-heading--lg { font-size: 26px; }
 
     .page-hero-card { min-height: 180px; }
-    .page-hero-title { font-size: 22px; }
+    .page-hero-title { font-size: 26px; }
 
     .benefits-grid { grid-template-columns: 1fr; }
     .loc-item-actions { gap: 6px; }
