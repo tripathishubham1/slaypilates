@@ -415,29 +415,23 @@ button { cursor: pointer; font-family: var(--font-sans); }
     background: #3a3a3a;
 }
 
-.tcard--reel {
-    flex: 0 0 320px;
-    height: auto;
-    max-height: 400px;
-    background: #fff;
-    border: 1px solid #eee;
+/* ===== Reel card — iframe with cropped header/footer ===== */
+.reel-card {
+    flex: 0 0 300px;
+    height: 500px;
+    scroll-snap-align: start;
+    border-radius: 14px;
     overflow: hidden;
+    position: relative;
+    background: #000;
 }
 
-.tcard--reel .instagram-media,
-.tcard--reel .instagram-media-rendered {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    border-radius: 14px !important;
-    box-shadow: none !important;
-}
-
-.tcard--reel iframe {
-    width: 100% !important;
-    border-radius: 14px !important;
-    position: static !important;
+.reel-card iframe {
+    width: 100%;
+    height: calc(100% + 110px);
+    border: none;
+    margin-top: -56px;
+    display: block;
 }
 
 .tcard > img {
@@ -1401,7 +1395,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
     .cards-section { padding-bottom: 60px; }
     .tcard { flex: 0 0 240px; height: 350px; }
-    .tcard--reel { flex: 0 0 260px; }
+    .reel-card { flex: 0 0 260px; height: 430px; }
 
     .transforms { height: 250vh; }
     .transforms-sticky { padding: 36px 0 0; }
@@ -1486,7 +1480,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .cards-track { padding: 0 14px; gap: 10px; }
     .tcard { flex: 0 0 210px; height: 300px; }
     .tcard-quote { font-size: 12.5px; }
-    .tcard--reel { flex: 0 0 230px; }
+    .reel-card { flex: 0 0 220px; height: 380px; }
 
     .transforms { height: 220vh; }
     .transforms-sticky { padding: 28px 0 0; }
