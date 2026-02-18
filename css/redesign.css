@@ -428,7 +428,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
 
 .reel-card iframe {
     width: 100%;
-    height: calc(100% + 110px);
+    height: calc(100% + 260px);
     border: none;
     margin-top: -56px;
     display: block;
