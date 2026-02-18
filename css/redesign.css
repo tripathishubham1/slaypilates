@@ -1406,7 +1406,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .reel-card { flex: 0 0 230px; height: 310px; }
     .reel-card iframe { height: 380px; }
 
-    .transforms { height: 250vh; }
+    .transforms { height: 180vh; }
     .transforms-sticky { padding: 36px 0 0; }
     .transforms-track { padding: 0 20px; gap: 16px; }
     .transforms-head { padding: 0 20px 28px; }
@@ -1491,7 +1491,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .reel-card { flex: 0 0 190px; height: 260px; }
     .reel-card iframe { height: 330px; }
 
-    .transforms { height: 220vh; }
+    .transforms { height: 160vh; }
     .transforms-sticky { padding: 28px 0 0; }
     .transforms-track { padding: 0 14px; gap: 12px; }
     .transforms-head { padding: 0 14px 22px; }
