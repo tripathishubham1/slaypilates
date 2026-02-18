@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us — Slay Pilates</title>
+    <meta name="description" content="Learn about Slay Pilates — the largest Pilates brand in New Delhi NCR, founded in 2018." />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.jpg">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/redesign.css">
+</head>
+<body>
+
+<!-- ======================== PAGE HERO ======================== -->
+<section class="page-hero">
+    <div class="page-hero-card">
+        <img src="img/slider/about-us.jpg" alt="About Slay Pilates">
+        <div class="page-hero-overlay"></div>
+
+        <nav class="nav" id="nav-bar">
+            <a href="index.html" class="nav-logo"><img src="img/logo/logo.jpg" alt="Slay Pilates"></a>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="branches.html">Our Studios</a>
+                <a href="get-a-franchisee.html">Get a Franchise</a>
+                <a href="contact-us.html">Contact</a>
+            </div>
+            <div class="nav-right"><a href="tel:+917042173765" class="nav-cart" title="Call Us"><i class="fas fa-phone"></i></a></div>
+            <div class="nav-burger" id="nav-burger"><span></span><span></span><span></span></div>
+        </nav>
+
+        <div class="page-hero-content">
+            <h1 class="page-hero-title">About Us</h1>
+            <div class="page-hero-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                About Us
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================== ABOUT CONTENT ======================== -->
+<section class="page-section">
+    <div class="page-section-inner">
+        <div class="about-grid reveal">
+            <div class="about-img">
+                <img src="img/gallery/about-content.jpg" alt="Slay Pilates Studio">
+            </div>
+            <div class="about-text">
+                <span class="intro-label">ABOUT SLAY PILATES</span>
+                <h2 class="section-heading section-heading--md">
+                    Your Beauty and Success <span class="it">Starts Here.</span>
+                </h2>
+                <p class="body-text">
+                    Founded in 2018, Slay Pilates has quickly become the largest Pilates brand in the New Delhi NCR region. At Slay Pilates, we believe in the power of movement to transform both body and mind. Our mission is to make Pilates accessible and empowering for everyone, creating a supportive and energizing environment where you can strengthen, tone, and rejuvenate.
+                </p>
+                <p class="body-text">
+                    With four state-of-the-art studios, we offer a variety of classes tailored to all fitness levels — whether you're a seasoned Pilates enthusiast or new to the practice. Our skilled instructors are dedicated to helping you achieve your fitness goals with a blend of traditional Pilates techniques and modern innovations.
+                </p>
+                <p class="body-text">
+                    Slay Pilates is more than just a workout; it's a lifestyle. Join our growing community and discover how we help you slay your fitness goals with grace and precision. Your strongest self is just one session away.
+                </p>
+                <a href="contact-us.html" class="btn-pill btn-pill--dark">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="img/logo/logo.jpg" alt="Slay Pilates">
+            <p>Founded in 2018, Slay Pilates is the largest Pilates brand in New Delhi NCR, empowering thousands to move better every day.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="branches.html">Studios</a>
+            <a href="get-a-franchisee.html">Franchise</a>
+            <a href="contact-us.html">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-col">
+            <h4>Hours</h4>
+            <p><i class="far fa-clock"></i> Monday — Saturday</p>
+            <p style="padding-left:19px;">6:00 AM — 9:00 PM</p>
+            <br>
+            <p><i class="far fa-envelope"></i> sublimelifestyle2024@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h4>Our Studios</h4>
+            <a href="tel:+918744007609"><i class="fas fa-phone"></i>GK2 — 8744007609</a>
+            <a href="tel:+918800226469"><i class="fas fa-phone"></i>Punjabi Bagh — 8800226469</a>
+            <a href="tel:+919958878864"><i class="fas fa-phone"></i>Green Park — 9958878864</a>
+            <a href="tel:+917042173765"><i class="fas fa-phone"></i>GK1 — 7042173765</a>
+            <a href="tel:+919599921096"><i class="fas fa-phone"></i>DLF Phase 1 — 9599921096</a>
+            <a href="tel:+919599920235"><i class="fas fa-phone"></i>Chhatarpur — 9599920235</a>
+            <a href="tel:+919599921077"><i class="fas fa-phone"></i>Vasant Vihar — 9599921077</a>
+        </div>
+    </div>
+    <div class="footer-bar">
+        <p>&copy; 2025 Slay Pilates. All rights reserved. D&amp;D By <a href="https://www.ajaykumarthakur.in/" target="_blank">TBS</a></p>
+        <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+</footer>
+
+<script>
+const burger = document.getElementById('nav-burger');
+const navLinks = document.getElementById('nav-links');
+burger.addEventListener('click', () => { burger.classList.toggle('open'); navLinks.classList.toggle('open'); });
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => { navLinks.classList.remove('open'); burger.classList.remove('open'); }));
+
+const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unzip:*)",
+      "Bash(python3 -c \"import zipfile; z=zipfile.ZipFile\\(''D:/Downloads/lato.zip''\\); print\\(''\\\\n''.join\\(z.namelist\\(\\)\\)\\)\")",
+      "Bash(python -c \"import zipfile; z=zipfile.ZipFile\\(''D:/Downloads/lato.zip''\\); print\\(''\\\\n''.join\\(z.namelist\\(\\)\\)\\)\")",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "WebSearch",
+      "WebFetch(domain:www.instagram.com)"
+    ]
+  }
+}
