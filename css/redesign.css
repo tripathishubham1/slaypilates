@@ -1421,15 +1421,16 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .studios-imgs { grid-template-columns: 1fr; }
     .studios-imgs .simg { height: 260px; }
 
-    .locations { padding: 60px 20px; }
-    .locations-head { margin-bottom: 32px; }
-    .loc-layout { grid-template-columns: 1fr; height: auto; border-radius: 14px; }
-    .loc-map { height: 280px; }
-    .loc-list { border-left: none; border-top: 1px solid #eee; max-height: 400px; }
-    .loc-item { padding: 18px 20px; }
-    .loc-item-name { font-size: 16px; }
-    .loc-item-addr { font-size: 11.5px; margin-bottom: 10px; }
-    .loc-item-btn { padding: 5px 12px; font-size: 10.5px; }
+    .locations { padding: 48px 20px; }
+    .locations-head { margin-bottom: 24px; }
+    .loc-layout { grid-template-columns: 1fr; height: auto; border-radius: 14px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+    .loc-map { height: 220px; border-radius: 14px 14px 0 0; }
+    .loc-list { border-left: none; border-top: 1px solid #eee; max-height: 300px; }
+    .loc-item { padding: 14px 16px; }
+    .loc-item-pin { width: 32px; height: 32px; font-size: 12px; }
+    .loc-item-name { font-size: 15px; }
+    .loc-item-addr { font-size: 11px; margin-bottom: 8px; }
+    .loc-item-btn { padding: 6px 14px; font-size: 10.5px; }
 
     .franchise { padding: 60px 20px; }
     .franchise-inner { gap: 32px; }
@@ -1504,15 +1505,17 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .studios-row { margin-bottom: 20px; }
     .studios-imgs .simg { height: 200px; border-radius: 12px; }
 
-    .locations { padding: 48px 14px; }
-    .locations-head { margin-bottom: 24px; }
-    .loc-layout { border-radius: 12px; }
-    .loc-map { height: 240px; }
-    .loc-list { max-height: 350px; }
-    .loc-item { padding: 16px; gap: 12px; }
-    .loc-item-pin { width: 32px; height: 32px; font-size: 12px; }
-    .loc-item-name { font-size: 15px; }
+    .locations { padding: 36px 10px; }
+    .locations-head { margin-bottom: 20px; }
+    .loc-layout { border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .loc-map { height: 180px; border-radius: 12px 12px 0 0; }
+    .loc-list { max-height: 280px; }
+    .loc-item { padding: 12px 14px; gap: 10px; }
+    .loc-item-pin { width: 30px; height: 30px; font-size: 11px; }
+    .loc-item-name { font-size: 14px; }
+    .loc-item-addr { font-size: 10.5px; line-height: 1.4; margin-bottom: 8px; }
     .loc-item-actions { flex-wrap: wrap; }
+    .loc-item-btn { padding: 5px 12px; font-size: 10px; }
 
     .franchise { padding: 48px 14px; }
     .franchise-left .section-heading { font-size: 24px; }
