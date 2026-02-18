@@ -1386,6 +1386,10 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .nav-right { display: none; }
     .nav-burger { display: flex; }
 
+    /* Allow nav overlay to escape hero card rounded corners */
+    .hero-card.nav-open,
+    .page-hero-card.nav-open { overflow: visible; }
+
     .hero-content { padding: 0 22px 28px; }
     .hero-title { font-size: 28px; }
     .hero-desc { font-size: 13px; max-width: 300px; margin-bottom: 22px; }
@@ -1398,6 +1402,7 @@ button { cursor: pointer; font-family: var(--font-sans); }
     .intro-photo::after { border-radius: 18px; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 60%, transparent 100%); }
     .intro-photo img { transform: scaleX(-1) scale(1.4); object-position: 50% 30%; }
     .intro-text { max-width: 100%; padding: 32px 22px; margin-left: 0; }
+    .intro-text .body-text ~ .body-text { display: none; }
     .section-heading--md { font-size: 26px; }
     .section-heading--lg { font-size: 28px; }
     .body-text { font-size: 14px; }

@@ -368,14 +368,17 @@
 // Burger menu
 const burger = document.getElementById('nav-burger');
 const navLinks = document.getElementById('nav-links');
+const heroCard = document.querySelector('.hero-card') || document.querySelector('.page-hero-card');
 burger.addEventListener('click', () => {
     burger.classList.toggle('open');
     navLinks.classList.toggle('open');
+    if (heroCard) heroCard.classList.toggle('nav-open');
 });
 document.querySelectorAll('.nav-links a').forEach(a =>
     a.addEventListener('click', () => {
         navLinks.classList.remove('open');
         burger.classList.remove('open');
+        if (heroCard) heroCard.classList.remove('nav-open');
     })
 );
 
